@@ -13,5 +13,7 @@
 @property (assign, nonatomic) CGFloat lineHeight;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (strong, nonatomic) UIColor *backgroundColor;
+@property (strong, nonatomic) UIView *leftHandler;
+@property (strong, nonatomic) UIView *rightHandler;
 
 @end

@@ -9,6 +9,7 @@
 #import "DoubleRangeSlider.h"
 
 CGFloat const kDefaultLineHeight = 2.0;
+CGFloat const kDefaultHandlerSize = 44.0;
 
 @implementation DoubleRangeSlider
 
@@ -20,6 +21,7 @@ CGFloat const kDefaultLineHeight = 2.0;
     if (self) {
         self.opaque = NO;
         [self setDefaultValues];
+        [self initHandlers];
     }
     
     return self;
@@ -36,6 +38,27 @@ CGFloat const kDefaultLineHeight = 2.0;
     self.lineHeight = kDefaultLineHeight;
     self.lineColor = [UIColor blackColor];
     self.backgroundColor = [UIColor clearColor];
+}
+
+- (void)initHandlers {
+    [self initLeftHandler];
+    [self initRightHandler];
+}
+
+- (void)initLeftHandler {
+    CGRect leftHandlerFrame = CGRectMake(0.0, 0.0, kDefaultHandlerSize, kDefaultHandlerSize);
+    self.leftHandler = [[UIView alloc] initWithFrame:leftHandlerFrame];
+    self.leftHandler.backgroundColor = [UIColor redColor];
+    self.leftHandler.center = CGPointMake(0.0, CGRectGetMidY(self.bounds));
+    [self addSubview:self.leftHandler];
+}
+
+- (void)initRightHandler {
+    CGRect rightHandlerFrame = CGRectMake(0.0, 0.0, kDefaultHandlerSize, kDefaultHandlerSize);
+    self.rightHandler = [[UIView alloc] initWithFrame:rightHandlerFrame];
+    self.rightHandler.backgroundColor = [UIColor blueColor];
+    self.rightHandler.center = CGPointMake(CGRectGetMaxX(self.bounds), CGRectGetMidY(self.bounds));
+    [self addSubview:self.rightHandler];
 }
 
 - (void)drawBackgroundColor {
