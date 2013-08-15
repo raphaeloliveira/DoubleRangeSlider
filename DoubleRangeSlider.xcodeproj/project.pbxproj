@@ -24,6 +24,10 @@
 		EAFC87AF17BD210B005D750A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAFC87AD17BD210B005D750A /* InfoPlist.strings */; };
 		EAFC87B217BD210C005D750A /* DoubleRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */; };
 		EAFC87BE17BD23EB005D750A /* DoubleRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */; };
+		EAFC87BF17BD3E94005D750A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878417BD210B005D750A /* CoreGraphics.framework */; };
+		EAFC87C317BD4141005D750A /* UIView+ColorOfPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87C217BD4141005D750A /* UIView+ColorOfPoint.m */; };
+		EAFC87C517BD4182005D750A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC87C417BD4182005D750A /* QuartzCore.framework */; };
+		EAFC87C817BD43E6005D750A /* UIColor+IsEqualToColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87C717BD43E6005D750A /* UIColor+IsEqualToColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,11 @@
 		EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleRangeSliderTests.m; sourceTree = "<group>"; };
 		EAFC87BC17BD23EB005D750A /* DoubleRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleRangeSlider.h; sourceTree = "<group>"; };
 		EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleRangeSlider.m; sourceTree = "<group>"; };
+		EAFC87C117BD4141005D750A /* UIView+ColorOfPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ColorOfPoint.h"; sourceTree = "<group>"; };
+		EAFC87C217BD4141005D750A /* UIView+ColorOfPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ColorOfPoint.m"; sourceTree = "<group>"; };
+		EAFC87C417BD4182005D750A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EAFC87C617BD43E6005D750A /* UIColor+IsEqualToColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IsEqualToColor.h"; sourceTree = "<group>"; };
+		EAFC87C717BD43E6005D750A /* UIColor+IsEqualToColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IsEqualToColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFC87C517BD4182005D750A /* QuartzCore.framework in Frameworks */,
 				EAFC878117BD210B005D750A /* UIKit.framework in Frameworks */,
 				EAFC878317BD210B005D750A /* Foundation.framework in Frameworks */,
 				EAFC878517BD210B005D750A /* CoreGraphics.framework in Frameworks */,
@@ -78,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFC87BF17BD3E94005D750A /* CoreGraphics.framework in Frameworks */,
 				EAFC87A517BD210B005D750A /* SenTestingKit.framework in Frameworks */,
 				EAFC87A617BD210B005D750A /* UIKit.framework in Frameworks */,
 				EAFC87A717BD210B005D750A /* Foundation.framework in Frameworks */,
@@ -110,6 +121,7 @@
 		EAFC877F17BD210B005D750A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAFC87C417BD4182005D750A /* QuartzCore.framework */,
 				EAFC878017BD210B005D750A /* UIKit.framework */,
 				EAFC878217BD210B005D750A /* Foundation.framework */,
 				EAFC878417BD210B005D750A /* CoreGraphics.framework */,
@@ -151,6 +163,7 @@
 			children = (
 				EAFC87B017BD210C005D750A /* DoubleRangeSliderTests.h */,
 				EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */,
+				EAFC87C017BD410E005D750A /* Categories */,
 				EAFC87AB17BD210B005D750A /* Supporting Files */,
 			);
 			path = DoubleRangeSliderTests;
@@ -172,6 +185,17 @@
 				EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */,
 			);
 			path = DoubleRangeSlider;
+			sourceTree = "<group>";
+		};
+		EAFC87C017BD410E005D750A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC87C617BD43E6005D750A /* UIColor+IsEqualToColor.h */,
+				EAFC87C717BD43E6005D750A /* UIColor+IsEqualToColor.m */,
+				EAFC87C117BD4141005D750A /* UIView+ColorOfPoint.h */,
+				EAFC87C217BD4141005D750A /* UIView+ColorOfPoint.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFC87B217BD210C005D750A /* DoubleRangeSliderTests.m in Sources */,
+				EAFC87C317BD4141005D750A /* UIView+ColorOfPoint.m in Sources */,
+				EAFC87C817BD43E6005D750A /* UIColor+IsEqualToColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
