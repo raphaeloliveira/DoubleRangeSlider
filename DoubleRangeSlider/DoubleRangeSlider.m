@@ -26,7 +26,7 @@ CGFloat const kDefaultLineHeight = 2.0;
 }
 
 - (void)drawRect:(CGRect)rect {
-    [self setBackgroundColorToClearColor];
+    [self drawBackgroundColor];
     [self drawLineYAxisCentered];
 }
 
@@ -38,7 +38,7 @@ CGFloat const kDefaultLineHeight = 2.0;
     self.backgroundColor = [UIColor clearColor];
 }
 
-- (void)setBackgroundColorToClearColor {
+- (void)drawBackgroundColor {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
     CGContextFillRect(context, self.bounds);
