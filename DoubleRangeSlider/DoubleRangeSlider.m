@@ -8,6 +8,8 @@
 
 #import "DoubleRangeSlider.h"
 
+CGFloat const kDefaultLineHeight = 2.0;
+
 @implementation DoubleRangeSlider
 
 #pragma mark - UIView
@@ -17,6 +19,7 @@
     
     if (self) {
         self.opaque = NO;
+        [self setDefaultValues];
     }
     
     return self;
@@ -29,15 +32,22 @@
 
 #pragma mark - Private
 
+- (void)setDefaultValues {
+    self.lineHeight = kDefaultLineHeight;
+    self.lineColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
+}
+
 - (void)setBackgroundColorToClearColor {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
+    CGContextSetFillColorWithColor(context, self.backgroundColor.CGColor);
     CGContextFillRect(context, self.bounds);
 }
 
 - (void)drawLineYAxisCentered {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, self.lineColor.CGColor);
+    CGContextSetLineWidth(context, self.lineHeight);
     CGContextBeginPath(context);
     CGContextMoveToPoint(context, CGRectGetMinX(self.bounds), CGRectGetMidY(self.bounds));
     CGContextAddLineToPoint(context, CGRectGetMaxX(self.bounds), CGRectGetMidY(self.bounds));

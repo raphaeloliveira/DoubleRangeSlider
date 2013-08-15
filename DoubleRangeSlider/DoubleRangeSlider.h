@@ -10,4 +10,8 @@
 
 @interface DoubleRangeSlider : UIView
 
+@property (assign, nonatomic) CGFloat lineHeight;
+@property (strong, nonatomic) UIColor *lineColor;
+@property (strong, nonatomic) UIColor *backgroundColor;
+
 @end
