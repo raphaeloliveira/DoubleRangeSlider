@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EAFC878117BD210B005D750A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878017BD210B005D750A /* UIKit.framework */; };
+		EAFC878317BD210B005D750A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878217BD210B005D750A /* Foundation.framework */; };
+		EAFC878517BD210B005D750A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878417BD210B005D750A /* CoreGraphics.framework */; };
+		EAFC878B17BD210B005D750A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAFC878917BD210B005D750A /* InfoPlist.strings */; };
+		EAFC878D17BD210B005D750A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC878C17BD210B005D750A /* main.m */; };
+		EAFC879117BD210B005D750A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC879017BD210B005D750A /* AppDelegate.m */; };
+		EAFC879317BD210B005D750A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879217BD210B005D750A /* Default.png */; };
+		EAFC879517BD210B005D750A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879417BD210B005D750A /* Default@2x.png */; };
+		EAFC879717BD210B005D750A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879617BD210B005D750A /* Default-568h@2x.png */; };
+		EAFC879A17BD210B005D750A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879817BD210B005D750A /* MainStoryboard.storyboard */; };
+		EAFC879D17BD210B005D750A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC879C17BD210B005D750A /* ViewController.m */; };
+		EAFC87A517BD210B005D750A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC87A417BD210B005D750A /* SenTestingKit.framework */; };
+		EAFC87A617BD210B005D750A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878017BD210B005D750A /* UIKit.framework */; };
+		EAFC87A717BD210B005D750A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878217BD210B005D750A /* Foundation.framework */; };
+		EAFC87AF17BD210B005D750A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAFC87AD17BD210B005D750A /* InfoPlist.strings */; };
+		EAFC87B217BD210C005D750A /* DoubleRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EAFC87A817BD210B005D750A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFC877517BD210B005D750A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAFC877C17BD210B005D750A;
+			remoteInfo = DoubleRangeSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAFC877D17BD210B005D750A /* DoubleRangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleRangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFC878017BD210B005D750A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EAFC878217BD210B005D750A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EAFC878417BD210B005D750A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EAFC878817BD210B005D750A /* DoubleRangeSlider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubleRangeSlider-Info.plist"; sourceTree = "<group>"; };
+		EAFC878A17BD210B005D750A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EAFC878C17BD210B005D750A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EAFC878E17BD210B005D750A /* DoubleRangeSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoubleRangeSlider-Prefix.pch"; sourceTree = "<group>"; };
+		EAFC878F17BD210B005D750A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EAFC879017BD210B005D750A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EAFC879217BD210B005D750A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EAFC879417BD210B005D750A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EAFC879617BD210B005D750A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EAFC879917BD210B005D750A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		EAFC879B17BD210B005D750A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EAFC879C17BD210B005D750A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAFC87A317BD210B005D750A /* DoubleRangeSliderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleRangeSliderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFC87A417BD210B005D750A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EAFC87AC17BD210B005D750A /* DoubleRangeSliderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubleRangeSliderTests-Info.plist"; sourceTree = "<group>"; };
+		EAFC87AE17BD210B005D750A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EAFC87B017BD210C005D750A /* DoubleRangeSliderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleRangeSliderTests.h; sourceTree = "<group>"; };
+		EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleRangeSliderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAFC877A17BD210B005D750A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC878117BD210B005D750A /* UIKit.framework in Frameworks */,
+				EAFC878317BD210B005D750A /* Foundation.framework in Frameworks */,
+				EAFC878517BD210B005D750A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFC879F17BD210B005D750A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC87A517BD210B005D750A /* SenTestingKit.framework in Frameworks */,
+				EAFC87A617BD210B005D750A /* UIKit.framework in Frameworks */,
+				EAFC87A717BD210B005D750A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAFC877417BD210B005D750A = {
+			isa = PBXGroup;
+			children = (
+				EAFC878617BD210B005D750A /* DoubleRangeSlider */,
+				EAFC87AA17BD210B005D750A /* DoubleRangeSliderTests */,
+				EAFC877F17BD210B005D750A /* Frameworks */,
+				EAFC877E17BD210B005D750A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAFC877E17BD210B005D750A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC877D17BD210B005D750A /* DoubleRangeSlider.app */,
+				EAFC87A317BD210B005D750A /* DoubleRangeSliderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFC877F17BD210B005D750A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC878017BD210B005D750A /* UIKit.framework */,
+				EAFC878217BD210B005D750A /* Foundation.framework */,
+				EAFC878417BD210B005D750A /* CoreGraphics.framework */,
+				EAFC87A417BD210B005D750A /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAFC878617BD210B005D750A /* DoubleRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC878F17BD210B005D750A /* AppDelegate.h */,
+				EAFC879017BD210B005D750A /* AppDelegate.m */,
+				EAFC879817BD210B005D750A /* MainStoryboard.storyboard */,
+				EAFC879B17BD210B005D750A /* ViewController.h */,
+				EAFC879C17BD210B005D750A /* ViewController.m */,
+				EAFC878717BD210B005D750A /* Supporting Files */,
+			);
+			path = DoubleRangeSlider;
+			sourceTree = "<group>";
+		};
+		EAFC878717BD210B005D750A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC878817BD210B005D750A /* DoubleRangeSlider-Info.plist */,
+				EAFC878917BD210B005D750A /* InfoPlist.strings */,
+				EAFC878C17BD210B005D750A /* main.m */,
+				EAFC878E17BD210B005D750A /* DoubleRangeSlider-Prefix.pch */,
+				EAFC879217BD210B005D750A /* Default.png */,
+				EAFC879417BD210B005D750A /* Default@2x.png */,
+				EAFC879617BD210B005D750A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAFC87AA17BD210B005D750A /* DoubleRangeSliderTests */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC87B017BD210C005D750A /* DoubleRangeSliderTests.h */,
+				EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */,
+				EAFC87AB17BD210B005D750A /* Supporting Files */,
+			);
+			path = DoubleRangeSliderTests;
+			sourceTree = "<group>";
+		};
+		EAFC87AB17BD210B005D750A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC87AC17BD210B005D750A /* DoubleRangeSliderTests-Info.plist */,
+				EAFC87AD17BD210B005D750A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAFC877C17BD210B005D750A /* DoubleRangeSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFC87B517BD210C005D750A /* Build configuration list for PBXNativeTarget "DoubleRangeSlider" */;
+			buildPhases = (
+				EAFC877917BD210B005D750A /* Sources */,
+				EAFC877A17BD210B005D750A /* Frameworks */,
+				EAFC877B17BD210B005D750A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoubleRangeSlider;
+			productName = DoubleRangeSlider;
+			productReference = EAFC877D17BD210B005D750A /* DoubleRangeSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAFC87A217BD210B005D750A /* DoubleRangeSliderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAFC87B817BD210C005D750A /* Build configuration list for PBXNativeTarget "DoubleRangeSliderTests" */;
+			buildPhases = (
+				EAFC879E17BD210B005D750A /* Sources */,
+				EAFC879F17BD210B005D750A /* Frameworks */,
+				EAFC87A017BD210B005D750A /* Resources */,
+				EAFC87A117BD210B005D750A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAFC87A917BD210B005D750A /* PBXTargetDependency */,
+			);
+			name = DoubleRangeSliderTests;
+			productName = DoubleRangeSliderTests;
+			productReference = EAFC87A317BD210B005D750A /* DoubleRangeSliderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAFC877517BD210B005D750A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Schibsted;
+			};
+			buildConfigurationList = EAFC877817BD210B005D750A /* Build configuration list for PBXProject "DoubleRangeSlider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EAFC877417BD210B005D750A;
+			productRefGroup = EAFC877E17BD210B005D750A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAFC877C17BD210B005D750A /* DoubleRangeSlider */,
+				EAFC87A217BD210B005D750A /* DoubleRangeSliderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAFC877B17BD210B005D750A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC878B17BD210B005D750A /* InfoPlist.strings in Resources */,
+				EAFC879317BD210B005D750A /* Default.png in Resources */,
+				EAFC879517BD210B005D750A /* Default@2x.png in Resources */,
+				EAFC879717BD210B005D750A /* Default-568h@2x.png in Resources */,
+				EAFC879A17BD210B005D750A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFC87A017BD210B005D750A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC87AF17BD210B005D750A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EAFC87A117BD210B005D750A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAFC877917BD210B005D750A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC878D17BD210B005D750A /* main.m in Sources */,
+				EAFC879117BD210B005D750A /* AppDelegate.m in Sources */,
+				EAFC879D17BD210B005D750A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAFC879E17BD210B005D750A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFC87B217BD210C005D750A /* DoubleRangeSliderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAFC87A917BD210B005D750A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAFC877C17BD210B005D750A /* DoubleRangeSlider */;
+			targetProxy = EAFC87A817BD210B005D750A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EAFC878917BD210B005D750A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFC878A17BD210B005D750A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EAFC879817BD210B005D750A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFC879917BD210B005D750A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		EAFC87AD17BD210B005D750A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAFC87AE17BD210B005D750A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EAFC87B317BD210C005D750A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EAFC87B417BD210C005D750A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAFC87B617BD210C005D750A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "DoubleRangeSlider/DoubleRangeSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EAFC87B717BD210C005D750A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "DoubleRangeSlider/DoubleRangeSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EAFC87B917BD210C005D750A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DoubleRangeSlider.app/DoubleRangeSlider";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "DoubleRangeSliderTests/DoubleRangeSliderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EAFC87BA17BD210C005D750A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DoubleRangeSlider.app/DoubleRangeSlider";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
+				INFOPLIST_FILE = "DoubleRangeSliderTests/DoubleRangeSliderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAFC877817BD210B005D750A /* Build configuration list for PBXProject "DoubleRangeSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFC87B317BD210C005D750A /* Debug */,
+				EAFC87B417BD210C005D750A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAFC87B517BD210C005D750A /* Build configuration list for PBXNativeTarget "DoubleRangeSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFC87B617BD210C005D750A /* Debug */,
+				EAFC87B717BD210C005D750A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EAFC87B817BD210C005D750A /* Build configuration list for PBXNativeTarget "DoubleRangeSliderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAFC87B917BD210C005D750A /* Debug */,
+				EAFC87BA17BD210C005D750A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAFC877517BD210B005D750A /* Project object */;
+}
