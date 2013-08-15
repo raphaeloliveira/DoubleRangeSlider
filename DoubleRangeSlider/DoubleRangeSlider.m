@@ -1,13 +1,13 @@
 //
-//  ViewController.h
+//  DoubleRangeSlider.m
 //  DoubleRangeSlider
 //
 //  Created by raphaeloliveira on 8/15/13.
 //  Copyright (c) 2013 Schibsted. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DoubleRangeSlider.h"
 
-@interface ViewController : UIViewController
+@implementation DoubleRangeSlider
 
 @end

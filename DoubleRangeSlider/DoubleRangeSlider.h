@@ -1,13 +1,13 @@
 //
-//  AppDelegate.m
+//  DoubleRangeSlider.h
 //  DoubleRangeSlider
 //
 //  Created by raphaeloliveira on 8/15/13.
 //  Copyright (c) 2013 Schibsted. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import <UIKit/UIKit.h>
 
-@implementation AppDelegate
+@interface DoubleRangeSlider : UIView
 
 @end

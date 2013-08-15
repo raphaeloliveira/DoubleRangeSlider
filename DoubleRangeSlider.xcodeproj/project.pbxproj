@@ -17,12 +17,13 @@
 		EAFC879517BD210B005D750A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879417BD210B005D750A /* Default@2x.png */; };
 		EAFC879717BD210B005D750A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879617BD210B005D750A /* Default-568h@2x.png */; };
 		EAFC879A17BD210B005D750A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFC879817BD210B005D750A /* MainStoryboard.storyboard */; };
-		EAFC879D17BD210B005D750A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC879C17BD210B005D750A /* ViewController.m */; };
+		EAFC879D17BD210B005D750A /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC879C17BD210B005D750A /* DemoViewController.m */; };
 		EAFC87A517BD210B005D750A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC87A417BD210B005D750A /* SenTestingKit.framework */; };
 		EAFC87A617BD210B005D750A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878017BD210B005D750A /* UIKit.framework */; };
 		EAFC87A717BD210B005D750A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878217BD210B005D750A /* Foundation.framework */; };
 		EAFC87AF17BD210B005D750A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAFC87AD17BD210B005D750A /* InfoPlist.strings */; };
 		EAFC87B217BD210C005D750A /* DoubleRangeSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */; };
+		EAFC87BE17BD23EB005D750A /* DoubleRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +51,16 @@
 		EAFC879417BD210B005D750A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		EAFC879617BD210B005D750A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EAFC879917BD210B005D750A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		EAFC879B17BD210B005D750A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EAFC879C17BD210B005D750A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EAFC879B17BD210B005D750A /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		EAFC879C17BD210B005D750A /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		EAFC87A317BD210B005D750A /* DoubleRangeSliderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoubleRangeSliderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC87A417BD210B005D750A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		EAFC87AC17BD210B005D750A /* DoubleRangeSliderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DoubleRangeSliderTests-Info.plist"; sourceTree = "<group>"; };
 		EAFC87AE17BD210B005D750A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAFC87B017BD210C005D750A /* DoubleRangeSliderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleRangeSliderTests.h; sourceTree = "<group>"; };
 		EAFC87B117BD210C005D750A /* DoubleRangeSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoubleRangeSliderTests.m; sourceTree = "<group>"; };
+		EAFC87BC17BD23EB005D750A /* DoubleRangeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubleRangeSlider.h; sourceTree = "<group>"; };
+		EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubleRangeSlider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +90,8 @@
 		EAFC877417BD210B005D750A = {
 			isa = PBXGroup;
 			children = (
-				EAFC878617BD210B005D750A /* DoubleRangeSlider */,
+				EAFC878617BD210B005D750A /* Demo */,
+				EAFC87BB17BD2344005D750A /* DoubleRangeSlider */,
 				EAFC87AA17BD210B005D750A /* DoubleRangeSliderTests */,
 				EAFC877F17BD210B005D750A /* Frameworks */,
 				EAFC877E17BD210B005D750A /* Products */,
@@ -114,16 +118,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EAFC878617BD210B005D750A /* DoubleRangeSlider */ = {
+		EAFC878617BD210B005D750A /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				EAFC878F17BD210B005D750A /* AppDelegate.h */,
 				EAFC879017BD210B005D750A /* AppDelegate.m */,
 				EAFC879817BD210B005D750A /* MainStoryboard.storyboard */,
-				EAFC879B17BD210B005D750A /* ViewController.h */,
-				EAFC879C17BD210B005D750A /* ViewController.m */,
+				EAFC879B17BD210B005D750A /* DemoViewController.h */,
+				EAFC879C17BD210B005D750A /* DemoViewController.m */,
 				EAFC878717BD210B005D750A /* Supporting Files */,
 			);
+			name = Demo;
 			path = DoubleRangeSlider;
 			sourceTree = "<group>";
 		};
@@ -158,6 +163,15 @@
 				EAFC87AD17BD210B005D750A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAFC87BB17BD2344005D750A /* DoubleRangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				EAFC87BC17BD23EB005D750A /* DoubleRangeSlider.h */,
+				EAFC87BD17BD23EB005D750A /* DoubleRangeSlider.m */,
+			);
+			path = DoubleRangeSlider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +286,8 @@
 			files = (
 				EAFC878D17BD210B005D750A /* main.m in Sources */,
 				EAFC879117BD210B005D750A /* AppDelegate.m in Sources */,
-				EAFC879D17BD210B005D750A /* ViewController.m in Sources */,
+				EAFC879D17BD210B005D750A /* DemoViewController.m in Sources */,
+				EAFC87BE17BD23EB005D750A /* DoubleRangeSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +468,7 @@
 				EAFC87B717BD210C005D750A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAFC87B817BD210C005D750A /* Build configuration list for PBXNativeTarget "DoubleRangeSliderTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +477,7 @@
 				EAFC87BA17BD210C005D750A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
