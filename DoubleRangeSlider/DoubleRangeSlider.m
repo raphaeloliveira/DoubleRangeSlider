@@ -9,7 +9,16 @@
 #import "DoubleRangeSlider.h"
 
 CGFloat const kDefaultLineHeight = 2.0;
+CGFloat const kDefaultMinDistanceBetweenHandlers = 5.0;
 CGFloat const kDefaultHandlerSize = 44.0;
+
+@interface DoubleRangeSlider ()
+
+@property (strong, nonatomic) UIView *leftHandler;
+@property (strong, nonatomic) UIView *rightHandler;
+@property (strong, nonatomic) UIView *currentMovingHandler;
+
+@end
 
 @implementation DoubleRangeSlider
 
@@ -78,15 +87,54 @@ CGFloat const kDefaultHandlerSize = 44.0;
 - (void)moveHandler:(UIView *)handler usingTouch:(UITouch *)touch {    
     CGPoint location = [touch locationInView:self];
     CGPoint previousLocation = [touch previousLocationInView:self];
-    CGFloat newHandlerCenterX = CGRectGetMidX(handler.frame) + location.x - previousLocation.x;
+    CGFloat xOffset = location.x - previousLocation.x;
+    CGFloat newHandlerCenterX = CGRectGetMidX(handler.frame) + xOffset;
 
-    if (CGRectGetMinX(self.bounds) < newHandlerCenterX && newHandlerCenterX < CGRectGetMaxX(self.bounds)) {
-        handler.frame = CGRectOffset(handler.frame, location.x - previousLocation.x, 0);
+    if ([self isValue:newHandlerCenterX betweenAllowedHorizontalBoundsForHandler:handler]) {
+        handler.frame = CGRectOffset(handler.frame, xOffset, 0.0);
+        [self moveOtherHandlerFromMovingHandlerIfDistanceIsTooClose:handler];
+    }
+}
+
+- (BOOL)isValue:(CGFloat)value betweenAllowedHorizontalBoundsForHandler:(UIView *)handler {
+    if (handler == self.leftHandler) {
+        return [self isValueBetweenAllowedHorizontalBoundsForLeftHandler:value];
+    }
+    else if (handler == self.rightHandler) {
+        return [self isValueBetweenAllowedHorizontalBoundsForRightHandler:value];
+    }
+    
+    return NO;
+}
+
+- (BOOL)isValueBetweenAllowedHorizontalBoundsForLeftHandler:(CGFloat)value {
+    CGFloat minAllowedX = CGRectGetMinX(self.bounds);
+    CGFloat maxAllowedX = CGRectGetMaxX(self.bounds) - kDefaultHandlerSize - self.minDistanceBetweenHandlers;
+    return (minAllowedX < value) && (value < maxAllowedX);
+}
+
+- (BOOL)isValueBetweenAllowedHorizontalBoundsForRightHandler:(CGFloat)value {
+    CGFloat minAllowedX = CGRectGetMinX(self.bounds) + kDefaultHandlerSize + self.minDistanceBetweenHandlers;
+    CGFloat maxAllowedX = CGRectGetMaxX(self.bounds);
+    return (minAllowedX < value) && (value < maxAllowedX);
+}
+
+- (void)moveOtherHandlerFromMovingHandlerIfDistanceIsTooClose:(UIView *)movingHandler {
+    CGFloat distance = CGRectGetMinX(self.rightHandler.frame) - CGRectGetMaxX(self.leftHandler.frame);
+    
+    if (distance < self.minDistanceBetweenHandlers) {
+        if (movingHandler == self.leftHandler) {
+            self.rightHandler.frame = CGRectOffset(self.rightHandler.frame, self.minDistanceBetweenHandlers - distance, 0.0);
+        }
+        else if (movingHandler == self.rightHandler) {
+            self.leftHandler.frame = CGRectOffset(self.leftHandler.frame, -(self.minDistanceBetweenHandlers - distance), 0.0);
+        }
     }
 }
 
 - (void)setDefaultValues {
     self.lineHeight = kDefaultLineHeight;
+    self.minDistanceBetweenHandlers = kDefaultMinDistanceBetweenHandlers;
     self.lineColor = [UIColor blackColor];
     self.backgroundColor = [UIColor clearColor];
 }

@@ -11,10 +11,8 @@
 @interface DoubleRangeSlider : UIControl
 
 @property (assign, nonatomic) CGFloat lineHeight;
+@property (assign, nonatomic) CGFloat minDistanceBetweenHandlers;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (strong, nonatomic) UIColor *backgroundColor;
-@property (strong, nonatomic) UIView *leftHandler;
-@property (strong, nonatomic) UIView *rightHandler;
-@property (strong, nonatomic) UIView *currentMovingHandler;
 
 @end

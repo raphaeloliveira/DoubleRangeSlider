@@ -422,10 +422,12 @@
 		EAFC87B617BD210C005D750A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Raphael Ruivo (5T3B843SL8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
 				INFOPLIST_FILE = "DoubleRangeSlider/DoubleRangeSlider-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0CBBCD6B-5A41-40E3-AC70-BD68C4E6D63A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,10 +435,12 @@
 		EAFC87B717BD210C005D750A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Raphael Ruivo (5T3B843SL8)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DoubleRangeSlider/DoubleRangeSlider-Prefix.pch";
 				INFOPLIST_FILE = "DoubleRangeSlider/DoubleRangeSlider-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0CBBCD6B-5A41-40E3-AC70-BD68C4E6D63A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
