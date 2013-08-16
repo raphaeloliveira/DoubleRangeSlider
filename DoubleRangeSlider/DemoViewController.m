@@ -25,7 +25,7 @@
 
 - (void)addDoubleRangeSlider
 {
-    CGRect frame = CGRectMake(0.0, 30.0, 320.0, 100.0);
+    CGRect frame = CGRectMake(20.0, 30.0, 280.0, 100.0);
     DoubleRangeSlider *slider = [[DoubleRangeSlider alloc] initWithFrame:frame];
     slider.lineColor = [UIColor orangeColor];
     slider.backgroundColor = [UIColor whiteColor];

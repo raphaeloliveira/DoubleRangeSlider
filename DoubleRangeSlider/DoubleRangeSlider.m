@@ -78,7 +78,11 @@ CGFloat const kDefaultHandlerSize = 44.0;
 - (void)moveHandler:(UIView *)handler usingTouch:(UITouch *)touch {    
     CGPoint location = [touch locationInView:self];
     CGPoint previousLocation = [touch previousLocationInView:self];
-    handler.frame = CGRectOffset(handler.frame, location.x - previousLocation.x, 0);
+    CGFloat newHandlerCenterX = CGRectGetMidX(handler.frame) + location.x - previousLocation.x;
+
+    if (CGRectGetMinX(self.bounds) < newHandlerCenterX && newHandlerCenterX < CGRectGetMaxX(self.bounds)) {
+        handler.frame = CGRectOffset(handler.frame, location.x - previousLocation.x, 0);
+    }
 }
 
 - (void)setDefaultValues {
