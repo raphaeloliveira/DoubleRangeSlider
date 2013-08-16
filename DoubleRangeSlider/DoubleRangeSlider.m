@@ -9,7 +9,7 @@
 #import "DoubleRangeSlider.h"
 
 CGFloat const kDefaultLineHeight = 2.0;
-CGFloat const kDefaultMinDistanceBetweenHandlers = 5.0;
+CGFloat const kDefaultMinDistanceBetweenHandlers = 2.0;
 CGFloat const kDefaultHandlerSize = 44.0;
 
 @interface DoubleRangeSlider ()
@@ -21,6 +21,20 @@ CGFloat const kDefaultHandlerSize = 44.0;
 @end
 
 @implementation DoubleRangeSlider
+
+#pragma mark - Public
+
+- (id)initWithFrame:(CGRect)frame numberOfSegments:(NSUInteger)numberOfSegments {
+    self = [self initWithFrame:frame];
+    
+    if (self) {
+        self.numberOfSegments = numberOfSegments;
+        self.currentLeftSegment = 0;
+        self.currentRightSegment = numberOfSegments - 1;
+    }
+    
+    return self;
+}
 
 #pragma mark - UIControl
 
@@ -36,7 +50,7 @@ CGFloat const kDefaultHandlerSize = 44.0;
         [self moveHandler:self.currentMovingHandler usingTouch:touch];
     }
     
-    [self sendActionsForControlEvents:UIControlEventValueChanged];
+    [self updateCurrentSegmentsAndSendActionsIfNeeded];
     return YES;
 }
 
@@ -82,6 +96,27 @@ CGFloat const kDefaultHandlerSize = 44.0;
     }
     
     return nil;
+}
+
+- (void)updateCurrentSegmentsAndSendActionsIfNeeded {
+    
+    NSUInteger leftSegment = [self segmentForXPosition:CGRectGetMidX(self.leftHandler.frame)];
+    NSUInteger rightSegment = [self segmentForXPosition:CGRectGetMidX(self.rightHandler.frame)];
+    
+    if (leftSegment != self.currentLeftSegment || rightSegment != self.currentRightSegment) {
+        self.currentLeftSegment = leftSegment;
+        self.currentRightSegment = rightSegment;
+        [self sendActionsForControlEvents:UIControlEventValueChanged];
+    }
+}
+
+- (NSUInteger)segmentForXPosition:(CGFloat)x {
+    if (x != CGRectGetMaxX(self.bounds)) {
+        return floor(x * self.numberOfSegments / CGRectGetWidth(self.bounds));
+    }
+    else {
+        return self.numberOfSegments - 1;
+    }
 }
 
 - (void)moveHandler:(UIView *)handler usingTouch:(UITouch *)touch {    

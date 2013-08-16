@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DemoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *leftOption;
+@property (weak, nonatomic) IBOutlet UILabel *rightOption;
 
 @end

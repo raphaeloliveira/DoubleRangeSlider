@@ -25,12 +25,19 @@
 
 - (void)addDoubleRangeSlider
 {
-    CGRect frame = CGRectMake(40.0, 30.0, 240.0, 100.0);
-    DoubleRangeSlider *slider = [[DoubleRangeSlider alloc] initWithFrame:frame];
+    CGRect frame = CGRectMake(10.0, 230.0, 300.0, 100.0);
+    DoubleRangeSlider *slider = [[DoubleRangeSlider alloc] initWithFrame:frame numberOfSegments:5];
+    [slider addTarget:self action:@selector(onDoubleRangeSliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     slider.lineColor = [UIColor orangeColor];
     slider.backgroundColor = [UIColor whiteColor];
     slider.lineHeight = 2.0;
     [self.view addSubview:slider];
+    [self onDoubleRangeSliderValueChanged:slider];
+}
+
+- (void)onDoubleRangeSliderValueChanged:(DoubleRangeSlider *)doubleRangeSlider {
+    self.leftOption.text = [NSString stringWithFormat:@"%d bedroom(s)", doubleRangeSlider.currentLeftSegment + 1];
+    self.rightOption.text = [NSString stringWithFormat:@"%d bedroom(s)", doubleRangeSlider.currentRightSegment + 1];
 }
 
 @end

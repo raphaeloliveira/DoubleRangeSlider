@@ -10,9 +10,14 @@
 
 @interface DoubleRangeSlider : UIControl
 
+@property (assign, nonatomic) NSUInteger numberOfSegments;
+@property (assign, nonatomic) NSUInteger currentLeftSegment;
+@property (assign, nonatomic) NSUInteger currentRightSegment;
 @property (assign, nonatomic) CGFloat lineHeight;
 @property (assign, nonatomic) CGFloat minDistanceBetweenHandlers;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (strong, nonatomic) UIColor *backgroundColor;
+
+- (id)initWithFrame:(CGRect)frame numberOfSegments:(NSUInteger)numberOfSegments;
 
 @end
