@@ -13,6 +13,28 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 @implementation DoubleRangeSlider
 
+#pragma mark - UIControl
+
+- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    [super beginTrackingWithTouch:touch withEvent:event];
+    CGPoint lastPoint = [touch locationInView:self];
+    self.currentMovingHandler = [self handlerContainingPoint:lastPoint];
+    return YES;
+}
+
+- (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    if (self.currentMovingHandler) {
+        [self moveHandler:self.currentMovingHandler usingTouch:touch];
+    }
+    
+    [self sendActionsForControlEvents:UIControlEventValueChanged];
+    return YES;
+}
+
+- (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {
+    [super endTrackingWithTouch:touch withEvent:event];
+}
+
 #pragma mark - UIView
 
 - (id)initWithFrame:(CGRect)frame {
@@ -32,7 +54,32 @@ CGFloat const kDefaultHandlerSize = 44.0;
     [self drawLineYAxisCentered];
 }
 
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    if (CGRectContainsPoint(self.leftHandler.frame, point) || CGRectContainsPoint(self.rightHandler.frame, point)) {
+        return self;
+    }
+    
+    return [super hitTest:point withEvent:event];
+}
+
 #pragma mark - Private
+
+- (UIView *)handlerContainingPoint:(CGPoint)point {
+    if (CGRectContainsPoint(self.leftHandler.frame, point)) {
+        return self.leftHandler;
+    }
+    else if (CGRectContainsPoint(self.rightHandler.frame, point)) {
+        return self.rightHandler;
+    }
+    
+    return nil;
+}
+
+- (void)moveHandler:(UIView *)handler usingTouch:(UITouch *)touch {    
+    CGPoint location = [touch locationInView:self];
+    CGPoint previousLocation = [touch previousLocationInView:self];
+    handler.frame = CGRectOffset(handler.frame, location.x - previousLocation.x, 0);
+}
 
 - (void)setDefaultValues {
     self.lineHeight = kDefaultLineHeight;
