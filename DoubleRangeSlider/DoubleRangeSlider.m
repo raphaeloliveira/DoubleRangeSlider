@@ -9,7 +9,7 @@
 #import "DoubleRangeSlider.h"
 
 CGFloat const kDefaultLineHeight = 2.0;
-CGFloat const kDefaultMinDistanceBetweenHandlers = 2.0;
+CGFloat const kDefaultMinDistanceBetweenHandlers = 0.0;
 CGFloat const kDefaultHandlerSize = 44.0;
 
 @interface DoubleRangeSlider ()

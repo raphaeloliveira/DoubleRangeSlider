@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DemoViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *leftOption;
-@property (weak, nonatomic) IBOutlet UILabel *rightOption;
+
+@property (strong, nonatomic) NSArray *yearOptions;
+@property (weak, nonatomic) IBOutlet UILabel *bedroomsLeftOption;
+@property (weak, nonatomic) IBOutlet UILabel *bedroomsRightOption;
+@property (weak, nonatomic) IBOutlet UILabel *yearLeftOption;
+@property (weak, nonatomic) IBOutlet UILabel *yearRightOption;
 
 @end
