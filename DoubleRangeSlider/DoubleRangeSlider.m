@@ -9,7 +9,7 @@
 #import "DoubleRangeSlider.h"
 
 CGFloat const kDefaultLineHeight = 2.0;
-CGFloat const kDefaultMinDistanceBetweenHandlers = 0.0;
+CGFloat const kDefaultMinDistanceBetweenHandlers = 20.0;
 CGFloat const kDefaultHandlerSize = 44.0;
 
 @interface DoubleRangeSlider ()
@@ -153,32 +153,32 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 - (BOOL)isValueBetweenAllowedHorizontalBoundsForLeftHandler:(CGFloat)value {
     CGFloat minAllowedX = CGRectGetMinX(self.bounds);
-    CGFloat maxAllowedX = CGRectGetMaxX(self.bounds) - kDefaultHandlerSize - self.minDistanceBetweenHandlers;
+    CGFloat maxAllowedX = CGRectGetMaxX(self.bounds) - self.minDistanceBetweenHandlersCenter;
     return (minAllowedX < value) && (value < maxAllowedX);
 }
 
 - (BOOL)isValueBetweenAllowedHorizontalBoundsForRightHandler:(CGFloat)value {
-    CGFloat minAllowedX = CGRectGetMinX(self.bounds) + kDefaultHandlerSize + self.minDistanceBetweenHandlers;
+    CGFloat minAllowedX = CGRectGetMinX(self.bounds) + self.minDistanceBetweenHandlersCenter;
     CGFloat maxAllowedX = CGRectGetMaxX(self.bounds);
     return (minAllowedX < value) && (value < maxAllowedX);
 }
 
 - (void)moveOtherHandlerFromMovingHandlerIfDistanceIsTooClose:(UIView *)movingHandler {
-    CGFloat distance = CGRectGetMinX(self.rightHandler.frame) - CGRectGetMaxX(self.leftHandler.frame);
-    
-    if (distance < self.minDistanceBetweenHandlers) {
+    CGFloat distance = CGRectGetMidX(self.rightHandler.frame) - CGRectGetMidX(self.leftHandler.frame);
+
+    if (distance < self.minDistanceBetweenHandlersCenter) {
         if (movingHandler == self.leftHandler) {
-            self.rightHandler.frame = CGRectOffset(self.rightHandler.frame, self.minDistanceBetweenHandlers - distance, 0.0);
+            self.rightHandler.frame = CGRectOffset(self.rightHandler.frame, self.minDistanceBetweenHandlersCenter - distance, 0.0);
         }
         else if (movingHandler == self.rightHandler) {
-            self.leftHandler.frame = CGRectOffset(self.leftHandler.frame, -(self.minDistanceBetweenHandlers - distance), 0.0);
+            self.leftHandler.frame = CGRectOffset(self.leftHandler.frame, -(self.minDistanceBetweenHandlersCenter - distance), 0.0);
         }
     }
 }
 
 - (void)setDefaultValues {
     self.lineHeight = kDefaultLineHeight;
-    self.minDistanceBetweenHandlers = kDefaultMinDistanceBetweenHandlers;
+    self.minDistanceBetweenHandlersCenter = kDefaultMinDistanceBetweenHandlers;
     self.lineColor = [UIColor blackColor];
     self.backgroundColor = [UIColor clearColor];
 }

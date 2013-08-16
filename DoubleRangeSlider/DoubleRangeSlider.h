@@ -14,7 +14,7 @@
 @property (assign, nonatomic) NSUInteger currentLeftSegment;
 @property (assign, nonatomic) NSUInteger currentRightSegment;
 @property (assign, nonatomic) CGFloat lineHeight;
-@property (assign, nonatomic) CGFloat minDistanceBetweenHandlers;
+@property (assign, nonatomic) CGFloat minDistanceBetweenHandlersCenter;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (strong, nonatomic) UIColor *backgroundColor;
 @property (strong, nonatomic) UIImage *leftHandlerImage;
