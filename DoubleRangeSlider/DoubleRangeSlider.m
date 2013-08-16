@@ -14,8 +14,8 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 @interface DoubleRangeSlider ()
 
-@property (strong, nonatomic) UIView *leftHandler;
-@property (strong, nonatomic) UIView *rightHandler;
+@property (strong, nonatomic) UIImageView *leftHandler;
+@property (strong, nonatomic) UIImageView *rightHandler;
 @property (strong, nonatomic) UIView *currentMovingHandler;
 
 @end
@@ -34,6 +34,16 @@ CGFloat const kDefaultHandlerSize = 44.0;
     }
     
     return self;
+}
+
+- (void)setLeftHandlerImage:(UIImage *)leftHandlerImage {
+    _leftHandlerImage = leftHandlerImage;
+    self.leftHandler.image = leftHandlerImage;
+}
+
+- (void)setRightHandlerImage:(UIImage *)rightHandlerImage {
+    _rightHandlerImage = rightHandlerImage;
+    self.rightHandler.image = rightHandlerImage;
 }
 
 #pragma mark - UIControl
@@ -99,7 +109,6 @@ CGFloat const kDefaultHandlerSize = 44.0;
 }
 
 - (void)updateCurrentSegmentsAndSendActionsIfNeeded {
-    
     NSUInteger leftSegment = [self segmentForXPosition:CGRectGetMidX(self.leftHandler.frame)];
     NSUInteger rightSegment = [self segmentForXPosition:CGRectGetMidX(self.rightHandler.frame)];
     
@@ -181,16 +190,18 @@ CGFloat const kDefaultHandlerSize = 44.0;
 
 - (void)initLeftHandler {
     CGRect leftHandlerFrame = CGRectMake(0.0, 0.0, kDefaultHandlerSize, kDefaultHandlerSize);
-    self.leftHandler = [[UIView alloc] initWithFrame:leftHandlerFrame];
-    self.leftHandler.backgroundColor = [UIColor redColor];
+    self.leftHandler = [[UIImageView alloc] initWithFrame:leftHandlerFrame];
+    self.leftHandler.contentMode = UIViewContentModeCenter;
+    self.leftHandler.image = self.leftHandlerImage;
     self.leftHandler.center = CGPointMake(0.0, CGRectGetMidY(self.bounds));
     [self addSubview:self.leftHandler];
 }
 
 - (void)initRightHandler {
     CGRect rightHandlerFrame = CGRectMake(0.0, 0.0, kDefaultHandlerSize, kDefaultHandlerSize);
-    self.rightHandler = [[UIView alloc] initWithFrame:rightHandlerFrame];
-    self.rightHandler.backgroundColor = [UIColor blueColor];
+    self.rightHandler = [[UIImageView alloc] initWithFrame:rightHandlerFrame];
+    self.rightHandler.contentMode = UIViewContentModeCenter;
+    self.rightHandler.image = self.rightHandlerImage;
     self.rightHandler.center = CGPointMake(CGRectGetMaxX(self.bounds), CGRectGetMidY(self.bounds));
     [self addSubview:self.rightHandler];
 }

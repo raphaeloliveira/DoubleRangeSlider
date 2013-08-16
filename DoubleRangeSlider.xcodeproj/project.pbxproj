@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA122EEA17BEA52600615560 /* blue_handler.png in Resources */ = {isa = PBXBuildFile; fileRef = EA122EE817BEA52600615560 /* blue_handler.png */; };
+		EA122EEB17BEA52600615560 /* blue_handler@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA122EE917BEA52600615560 /* blue_handler@2x.png */; };
 		EAFC878117BD210B005D750A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878017BD210B005D750A /* UIKit.framework */; };
 		EAFC878317BD210B005D750A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878217BD210B005D750A /* Foundation.framework */; };
 		EAFC878517BD210B005D750A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFC878417BD210B005D750A /* CoreGraphics.framework */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA122EE817BEA52600615560 /* blue_handler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_handler.png; sourceTree = "<group>"; };
+		EA122EE917BEA52600615560 /* blue_handler@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue_handler@2x.png"; sourceTree = "<group>"; };
 		EAFC877D17BD210B005D750A /* DoubleRangeSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleRangeSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFC878017BD210B005D750A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAFC878217BD210B005D750A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA122EE717BEA51A00615560 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EA122EE817BEA52600615560 /* blue_handler.png */,
+				EA122EE917BEA52600615560 /* blue_handler@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		EAFC877417BD210B005D750A = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +160,7 @@
 		EAFC878717BD210B005D750A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA122EE717BEA51A00615560 /* Images */,
 				EAFC878817BD210B005D750A /* DoubleRangeSlider-Info.plist */,
 				EAFC878917BD210B005D750A /* InfoPlist.strings */,
 				EAFC878C17BD210B005D750A /* main.m */,
@@ -274,6 +288,8 @@
 				EAFC879517BD210B005D750A /* Default@2x.png in Resources */,
 				EAFC879717BD210B005D750A /* Default-568h@2x.png in Resources */,
 				EAFC879A17BD210B005D750A /* MainStoryboard.storyboard in Resources */,
+				EA122EEA17BEA52600615560 /* blue_handler.png in Resources */,
+				EA122EEB17BEA52600615560 /* blue_handler@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

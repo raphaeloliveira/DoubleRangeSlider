@@ -31,6 +31,8 @@
     slider.lineColor = [UIColor orangeColor];
     slider.backgroundColor = [UIColor whiteColor];
     slider.lineHeight = 2.0;
+    slider.leftHandlerImage = [UIImage imageNamed:@"blue_handler"];
+    slider.rightHandlerImage = [UIImage imageNamed:@"blue_handler"];
     [self.view addSubview:slider];
     [self onDoubleRangeSliderValueChanged:slider];
 }

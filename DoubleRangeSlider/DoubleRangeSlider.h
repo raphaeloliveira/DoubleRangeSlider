@@ -17,6 +17,8 @@
 @property (assign, nonatomic) CGFloat minDistanceBetweenHandlers;
 @property (strong, nonatomic) UIColor *lineColor;
 @property (strong, nonatomic) UIColor *backgroundColor;
+@property (strong, nonatomic) UIImage *leftHandlerImage;
+@property (strong, nonatomic) UIImage *rightHandlerImage;
 
 - (id)initWithFrame:(CGRect)frame numberOfSegments:(NSUInteger)numberOfSegments;
 
